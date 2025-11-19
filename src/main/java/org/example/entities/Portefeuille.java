@@ -1,13 +1,15 @@
 package org.example.entities;
 
+import java.util.List;
+
 public class Portefeuille {
     private String couleur;
     private Integer porte_carte;
     private Double poids;
     private String marque;
-    private Argent argent;
+    private List<Billet> argent;
 
-    public Portefeuille(String couleur, Integer porte_carte, Double poids, String marque, Argent argent) {
+    public Portefeuille(String couleur, Integer porte_carte, Double poids, String marque, List<Billet> argent) {
         this.couleur = couleur;
         this.porte_carte = porte_carte;
         this.poids = poids;
@@ -31,7 +33,7 @@ public class Portefeuille {
         return marque;
     }
 
-    public Argent getArgent() {
+    public List<Billet> getArgent() {
         return argent;
     }
 
@@ -39,7 +41,7 @@ public class Portefeuille {
         this.poids = poids;
     }
 
-    public void setArgent(Argent argent) {
+    public void setArgent(List<Billet> argent) {
         this.argent = argent;
     }
 }
