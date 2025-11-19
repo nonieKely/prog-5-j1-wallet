@@ -7,14 +7,14 @@ public class Portefeuille {
     private Integer porte_carte;
     private Double poids;
     private String marque;
-    private List<Billet> argent;
+    private List<Argent> somme;
 
-    public Portefeuille(String couleur, Integer porte_carte, Double poids, String marque, List<Billet> argent) {
+    public Portefeuille(String couleur, Integer porte_carte, Double poids, String marque, List<Argent> somme) {
         this.couleur = couleur;
         this.porte_carte = porte_carte;
         this.poids = poids;
         this.marque = marque;
-        this.argent = argent;
+        this.somme = somme;
     }
 
     public String getCouleur() {
@@ -33,15 +33,15 @@ public class Portefeuille {
         return marque;
     }
 
-    public List<Billet> getArgent() {
-        return argent;
+    public List<Argent> getArgent() {
+        return somme;
     }
 
     public void setPoids(Double poids) {
         this.poids = poids;
     }
 
-    public void setArgent(List<Billet> argent) {
-        this.argent = argent;
+    public void setArgent(List<Argent> somme) {
+        this.somme = somme;
     }
 }
