@@ -1,6 +1,7 @@
 package org.example.methods;
 
 import org.example.entities.Argent;
+import org.example.entities.Carte;
 import org.example.entities.Portefeuille;
 
 import java.util.List;
@@ -30,5 +31,12 @@ public class PortefeuilleMethods {
        nouvelArgent.add(argent);
 
        return nouvelArgent;
+    }
+
+    public List<Carte> addCarte ( Portefeuille portefeuille , Carte carte){
+        List<Carte> nouvellesCartes = portefeuille.getCartes();
+        nouvellesCartes.add(carte);
+
+        return nouvellesCartes;
     }
 }
