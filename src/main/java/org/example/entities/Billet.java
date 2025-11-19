@@ -1,10 +1,10 @@
 package org.example.entities;
 
-public class Argent {
+public class Billet {
     private Double somme;
     private String devise;
 
-    public Argent(Double somme, String devise) {
+    public Billet(Double somme, String devise) {
         this.somme = somme;
         this.devise = devise;
     }
