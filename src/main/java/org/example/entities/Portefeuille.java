@@ -5,6 +5,7 @@ import java.util.List;
 public class Portefeuille {
     private String couleur;
     private Integer porte_carte;
+    private List<Carte> cartes;
     private Double poids;
     private String marque;
     private List<Argent> argent;
@@ -14,7 +15,17 @@ public class Portefeuille {
         this.porte_carte = porte_carte;
         this.poids = poids;
         this.marque = marque;
-        this.argent = Portefeuille.this.argent;
+        this.argent = argent;
+    }
+
+    // parce que ce ne sont pas toutes les portefeuilles qui ont des cartes
+    public Portefeuille(String couleur, Integer porte_carte, List<Carte> cartes, Double poids, String marque, List<Argent> argent) {
+        this.couleur = couleur;
+        this.porte_carte = porte_carte;
+        this.cartes = cartes;
+        this.poids = poids;
+        this.marque = marque;
+        this.argent = argent;
     }
 
     public String getCouleur() {
@@ -23,6 +34,10 @@ public class Portefeuille {
 
     public Integer getPorte_carte() {
         return porte_carte;
+    }
+
+    public List<Carte> getCartes() {
+        return cartes;
     }
 
     public Double getPoids() {
