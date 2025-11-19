@@ -39,4 +39,15 @@ public class PortefeuilleMethods {
 
         return nouvellesCartes;
     }
+
+    public List<Argent> perdArgent ( Portefeuille portefeuille , Argent argent){
+        Double valeurPerdue = -1 * argent.getValeur();
+        argent.setValeur(valeurPerdue);
+
+        List<Argent> nouvelArgent = portefeuille.getArgent();
+        nouvelArgent.add(argent);
+        portefeuille.setArgent(nouvelArgent);
+
+        return getSommedArgent(portefeuille);
+    }
 }
